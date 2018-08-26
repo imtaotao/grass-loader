@@ -1,0 +1,20 @@
+{
+  "name": "grass-loader",
+  "version": "0.0.1",
+  "description": "Used to precompile garss templates",
+  "main": "lib/index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imtaotao/grass-loader.git"
+  },
+  "dependencies": {
+    "loader-utils": "*"
+  },
+  "author": "taotao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imtaotao/grass-loader/issues"
+  },
+  "homepage": "https://github.com/imtaotao/grass-loader#readme"
+}
