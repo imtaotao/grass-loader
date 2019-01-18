@@ -1,0 +1,6 @@
+<script>
+console.log(Grass);
+export default function () {
+  console.log(121);
+}
+</script>

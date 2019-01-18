@@ -29,28 +29,18 @@ README.md
 # source maps
 *.js.map
 
-# source files
-lib/
-
 # test projects
 test/
 
 # self
 .npmignore
+.gitignore
 
-#example
-example/
-
-#docs
-docs/
+#dev
+dev/
 
 # other configs
 webpack.config.js
-tsconfig.json
-release.tsconfig.json
-index.ts
+index.js
 index.html
 webpack.config.json
-types.ts
-build_file.js
-binaries/

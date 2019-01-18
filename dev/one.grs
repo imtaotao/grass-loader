@@ -1,0 +1,10 @@
+<template name='tao'>
+  <div> one </div>
+</template>
+
+<script>
+
+export default function One () {
+  return /* #temp string */ 
+}
+</script>
