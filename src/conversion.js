@@ -38,10 +38,10 @@ function onlyTemplate (file) {
   method += ` { return \`${tempStr}\`; }`
 
   if (options.styleSrc) {
-    let code = `import Grass from '${file.options.lib}';\n`
-    code += `import _style from ${options.styleSrc};\n`
-    code += `export default Grass.CSSModules(_style)(${method})`
-    return code
+    let newCode = `import Grass from '${file.options.lib}';\n`
+    newCode += `import _style from ${options.styleSrc};\n`
+    newCode += `export default Grass.CSSModules(_style)(${method})`
+    return newCode
   }
 
   return `export default ${method}`

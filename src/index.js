@@ -4,15 +4,13 @@ const getOptions = require('loader-utils').getOptions
 module.exports = function loader (source) {
   source = source.trim()
   if (/^\/\/\s*#no\s+compile\s*\n/.test(source)) {
-    this.callback(null, source)
-    return
+    return source
   }
 
   const result = handleSource(source)
   // if no template and script，it's not grass file
   if (!result || (!result.script && !result.template)) {
-    this.callback(null, source)
-    return
+    return source
   }
 
   /**
@@ -21,12 +19,8 @@ module.exports = function loader (source) {
    * needGrass: boolean
    **/
   result.options = dealWithOptions(getOptions(this))
-  const newSource = conversion(result)
 
-  this.callback(null, newSource
-    ? newSource
-    : source
-  )
+  return conversion(result) || source
 }
 
 function handleSource (source) {
