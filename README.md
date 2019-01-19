@@ -4,17 +4,16 @@
 |    属性    | Description | Type | Default |
 |------------|-------------|------|---------|
 | lib | 需要用到的 grass 库 | string | @rustle/grass |
-| needGrass  | 是否自动 import grass | boolean | false |
+| needGrass  | 是否自动 import grass | boolean | false |
 
 ## template 字符与注释
-用两种方法导出 template，通过注释的方式，会把需要的目标方法或字符串替换到特定的注释地方
+用两种方法导出 template，通过注释的方式，会把需要的目标方法或字符串替换到特定的注释地方
 1. template method <br>
 ```js
 // #temp method
 /* #temp method */
-```
+
 可以简写为：
-```js
 // #temp
 /* #temp */
 ```
@@ -39,7 +38,12 @@ export default function C () {
 ```
 
 ## 阻止编译
-对于不想要参与编译的文件，可以通过 `// no compile` 来阻止编译
+对于不想要参与编译的文件，可以通过 `// #no compile` 来阻止编译，但这行阻止编译的注释只能放在文件的最前面<br>
+demo：
+```js
+// #no compile
+...
+```
 
 ## 几种 grass 文件的格式
 1. 一种为 `template` 和 `script` 标签都齐全的文件格式，这个时候 `template` 注释才有作用
@@ -52,7 +56,7 @@ export default function C () {
 </template>
 ```
 3. 如果只有 `script` 标签，那么会作为纯 `js` 文件来处理，但，`needGrass` 配置同样生效
-4. 对于纯 `js` 文件， `template` 和 `script` 标签都不存在的情况下，会跳过编译，needGrass` 配置同样不会生效
+4. 对于纯 `js` 文件， `template` 和 `script` 标签都不存在的情况下，会跳过编译，`needGrass` 配置将不会生效
 
 
 ## 使用
