@@ -1,10 +1,11 @@
-<template name='tao'>
+<template>
   <div> one </div>
 </template>
 
 <script>
-
+const temp = (/* #temp string */)
 export default function One () {
-  return /* #temp string */ 
+  return temp
 }
+console.log(temp);
 </script>
