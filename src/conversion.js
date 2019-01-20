@@ -10,7 +10,7 @@ function completeFormat (file) {
   let newCode
   const scrCode = file.script.content
   const tempStr = file.template.content.replace(/`/g, '\\`')
-  const string = `"${tempStr}"\n`
+  const string = `\`${tempStr}\`\n`
   const method = `template () { return \`${tempStr}\`; }\n`
 
   newCode = replaceMethod(scrCode, method)

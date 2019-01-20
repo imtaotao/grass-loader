@@ -1,6 +1,6 @@
 {
   "name": "grass-loader",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Used to precompile garss templates",
   "main": "src/index.js",
   "scripts": {
